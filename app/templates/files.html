@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block main %}
+
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Files Uploaded</title>
+</head>
+<body>
+<h1>Uploaded Images</h1>
+{% for imagelist in imagelist %}
+<img src = "{{ url_for('app', filename=uploads)}}">
+{% endfor %}
+</body>
+</html>
+
+{% endblock %}
