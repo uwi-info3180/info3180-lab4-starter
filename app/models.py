@@ -1,8 +1,5 @@
 from . import db
-<<<<<<< HEAD
-=======
 from werkzeug.security import generate_password_hash
->>>>>>> 79519a6 (updated files)
 
 
 class UserProfile(db.Model):
@@ -16,8 +13,6 @@ class UserProfile(db.Model):
     first_name = db.Column(db.String(80))
     last_name = db.Column(db.String(80))
     username = db.Column(db.String(80), unique=True)
-<<<<<<< HEAD
-=======
     password = db.Column(db.String(128))
 
     def __init__(self, first_name, last_name, username, password):
@@ -25,7 +20,6 @@ class UserProfile(db.Model):
         self.last_name = last_name
         self.username = username
         self.password = generate_password_hash(password, method='pbkdf2:sha256')
->>>>>>> 79519a6 (updated files)
 
     def is_authenticated(self):
         return True
@@ -43,8 +37,6 @@ class UserProfile(db.Model):
             return str(self.id)  # python 3 support
 
     def __repr__(self):
-<<<<<<< HEAD
         return '<User %r>' % (self.username)
-=======
         return '<User %r>' % (self.username)
->>>>>>> 79519a6 (updated files)
+
