@@ -18,3 +18,16 @@ body {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
+
+#img-container{
+    width: 85%;
+}
+
+.img-grid{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    row-gap: 40px;
+    flex-wrap:wrap;
+    list-style: none;
+}

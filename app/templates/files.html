@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block main %}
+{% if filenames%}
+<div id="img-container">
+    <ul  class="img-grid">
+    {% for filename in filenames %}
+       <li><img src="{{ url_for('get_image', filename=filename) }}"  height="200px" width="200px"/>
+        </li> 
+    {% endfor %}
+</ul>
+</div>
+{% endif%}
+{% endblock %}
